@@ -24,7 +24,7 @@ rbac-consumer or activity-consumer settings.
 - `rbac-consumer.max-connections-per-route-unauth`: connection limit per route for unauthenticated client
 
 The location of the RBAC and Activity services are configured with the
-`rbac-consumer.api-url` and `activity-consumer.api.url` settings respectivetly.
+`rbac-consumer.api-url` and `activity-consumer.api-url` settings respectivetly.
 
 ### Activity
 
