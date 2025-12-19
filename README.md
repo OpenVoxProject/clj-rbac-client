@@ -1,6 +1,8 @@
 # rbac-client
 
-A Clojure library designed to hold lightweight API clients for PE services.
+A Clojure library designed to hold lightweight API clients for PE services. Note: This is not used for OpenVox. However, openvox-server
+still has remnants of hooks allowing for the use of PE RBAC, so until we spend the time to remove the unused code, we keep this
+library around.
 
 ## Usage
 
@@ -46,5 +48,6 @@ sets of files.
 ## License
 
 Copyright © 2016 Puppet
+Copyright © 2025 Vox Pupuli
 
 Distributed under the Apache License version 2.0
