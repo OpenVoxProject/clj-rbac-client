@@ -1,44 +1,39 @@
-(defn deploy-info
-  [url]
-  {:url url
-   :username :env/clojars_jenkins_username
-   :password :env/clojars_jenkins_password
-   :sign-releases false})
-
-(defproject puppetlabs/rbac-client "1.1.6-SNAPSHOT"
+(defproject org.openvoxproject/rbac-client "1.1.6-SNAPSHOT"
   :description "Tools for interacting with PE RBAC"
   :license {:name "Apache License, Version 2.0"
             :url "http://www.apache.org/licenses/LICENSE-2.0.html"}
 
-  :parent-project {:coords [puppetlabs/clj-parent "5.6.17"]
+  :parent-project {:coords [org.openvoxproject/clj-parent "7.4.1-SNAPSHOT"]
                    :inherit [:managed-dependencies]}
 
   :dependencies [[org.clojure/clojure]
                  [ring/ring-core]
                  [ring/ring-json]
-                 [puppetlabs/ring-middleware]
+                 [org.openvoxproject/ring-middleware]
                  [slingshot]
-                 [puppetlabs/kitchensink]
-                 [puppetlabs/http-client]
-                 [puppetlabs/trapperkeeper]
-                 [puppetlabs/i18n]]
+                 [org.openvoxproject/kitchensink]
+                 [org.openvoxproject/http-client]
+                 [org.openvoxproject/trapperkeeper]
+                 [org.openvoxproject/i18n]]
 
   :pedantic? :abort
-  :profiles {:dev {:dependencies [[puppetlabs/kitchensink :classifier "test"]
-                                  [puppetlabs/trapperkeeper :classifier "test"]
-                                  [puppetlabs/trapperkeeper-webserver-jetty9]
-                                  [puppetlabs/trapperkeeper-webserver-jetty9 :classifier "test"]
+  :profiles {:dev {:dependencies [[org.openvoxproject/kitchensink :classifier "test"]
+                                  [org.openvoxproject/trapperkeeper :classifier "test"]
+                                  [org.openvoxproject/trapperkeeper-webserver-jetty9]
+                                  [org.openvoxproject/trapperkeeper-webserver-jetty9 :classifier "test"]
                                   [org.bouncycastle/bcpkix-jdk15on]
                                   ; transitive dependency
                                   [org.clojure/tools.nrepl "0.2.13"]]}
              :testutils {:source-paths ^:replace  ["test"]}}
 
   :plugins [[lein-parent "0.3.7"]
-            [puppetlabs/i18n "0.8.0"]]
+            [org.openvoxproject/i18n "0.8.0"]]
 
   :classifiers  [["test" :testutils]]
 
   :test-paths ["test"]
 
-  :deploy-repositories [["releases" ~(deploy-info "https://clojars.org/repo")]
-                        ["snapshots" "https://artifactory.delivery.puppetlabs.net/artifactory/clojure-snapshots__local/"]])
+  :deploy-repositories [["clojars" {:url "https://clojars.org/repo"
+                                     :username :env/CLOJARS_USERNAME
+                                     :password :env/CLOJARS_PASSWORD
+                                     :sign-releases false}]])
