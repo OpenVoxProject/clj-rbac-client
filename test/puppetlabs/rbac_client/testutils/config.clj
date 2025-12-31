@@ -24,7 +24,7 @@
    :ssl-key "dev-resources/ssl/key.pem"})
 
 (defn jetty-ssl-config
-  "Return a TK Webserver Jetty9 config that defines an SSL server running on
+  "Return a TK Webserver Jetty10 config that defines an SSL server running on
   `localhost` on a random port, and uses the SSL files in the
   `dev-resources/ssl` directory. Note that while an effort is made to choose an
   open port, the port cannot be guaranteed to be open."
