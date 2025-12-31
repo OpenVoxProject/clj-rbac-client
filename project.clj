@@ -1,4 +1,4 @@
-(defproject org.openvoxproject/rbac-client "1.1.8-SNAPSHOT"
+(defproject org.openvoxproject/rbac-client "1.1.8"
   :description "Tools for interacting with PE RBAC"
   :license {:name "Apache License, Version 2.0"
             :url "http://www.apache.org/licenses/LICENSE-2.0.html"}
