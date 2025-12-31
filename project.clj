@@ -3,7 +3,7 @@
   :license {:name "Apache License, Version 2.0"
             :url "http://www.apache.org/licenses/LICENSE-2.0.html"}
 
-  :parent-project {:coords [org.openvoxproject/clj-parent "7.5.0"]
+  :parent-project {:coords [org.openvoxproject/clj-parent "7.5.1"]
                    :inherit [:managed-dependencies]}
 
   :dependencies [[org.clojure/clojure]
@@ -27,7 +27,7 @@
              :testutils {:source-paths ^:replace  ["test"]}}
 
   :plugins [[lein-parent "0.3.7"]
-            [org.openvoxproject/i18n "0.9.3"]]
+            [org.openvoxproject/i18n "0.9.4"]]
 
   :classifiers  [["test" :testutils]]
 
