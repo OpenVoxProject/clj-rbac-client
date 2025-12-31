@@ -21,7 +21,7 @@
                                   [org.openvoxproject/trapperkeeper :classifier "test"]
                                   [org.openvoxproject/trapperkeeper-webserver-jetty10]
                                   [org.openvoxproject/trapperkeeper-webserver-jetty10 :classifier "test"]
-                                  [org.bouncycastle/bcpkix-jdk15on]
+                                  [org.bouncycastle/bcpkix-jdk18on]
                                   ; transitive dependency
                                   [org.clojure/tools.nrepl "0.2.13"]]}
              :testutils {:source-paths ^:replace  ["test"]}}
