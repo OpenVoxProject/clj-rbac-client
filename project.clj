@@ -19,8 +19,8 @@
   :pedantic? :abort
   :profiles {:dev {:dependencies [[org.openvoxproject/kitchensink :classifier "test"]
                                   [org.openvoxproject/trapperkeeper :classifier "test"]
-                                  [org.openvoxproject/trapperkeeper-webserver-jetty9]
-                                  [org.openvoxproject/trapperkeeper-webserver-jetty9 :classifier "test"]
+                                  [org.openvoxproject/trapperkeeper-webserver-jetty10]
+                                  [org.openvoxproject/trapperkeeper-webserver-jetty10 :classifier "test"]
                                   [org.bouncycastle/bcpkix-jdk15on]
                                   ; transitive dependency
                                   [org.clojure/tools.nrepl "0.2.13"]]}
