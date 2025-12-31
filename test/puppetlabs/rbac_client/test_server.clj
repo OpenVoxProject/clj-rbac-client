@@ -12,7 +12,7 @@
   (let [handler (fn handler
                   [request]
                   (-> response
-                      (assoc-in [:body :_request] (dissoc request :body))
+                      (assoc-in [:body :_request] (dissoc request :body :response))
                       (assoc :headers {"Content-Type" "application/json"})))]
     (-> handler
         wrap-json-response
@@ -26,9 +26,9 @@
     :body "Not Found"}))
 
 (defn build-test-service
-  [handler]
+  [handler path]
   (tk/service
    [[:WebserverService add-ring-handler]]
    (init [this context]
-         (add-ring-handler handler)
+         (add-ring-handler handler path)
          context)))
