@@ -1,9 +1,9 @@
-(defproject org.openvoxproject/rbac-client "1.1.9-SNAPSHOT"
+(defproject org.openvoxproject/rbac-client "1.2.0-SNAPSHOT"
   :description "Tools for interacting with PE RBAC"
   :license {:name "Apache License, Version 2.0"
             :url "http://www.apache.org/licenses/LICENSE-2.0.html"}
 
-  :parent-project {:coords [org.openvoxproject/clj-parent "7.5.1"]
+  :parent-project {:coords [org.openvoxproject/clj-parent "7.6.3"]
                    :inherit [:managed-dependencies]}
 
   :dependencies [[org.clojure/clojure]
@@ -26,8 +26,8 @@
                                   [org.clojure/tools.nrepl "0.2.13"]]}
              :testutils {:source-paths ^:replace  ["test"]}}
 
-  :plugins [[lein-parent "0.3.7"]
-            [org.openvoxproject/i18n "0.9.4"]]
+  :plugins [[lein-parent "0.3.9"]
+            [org.openvoxproject/i18n "1.0.2"]]
 
   :classifiers  [["test" :testutils]]
 
