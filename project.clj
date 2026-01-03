@@ -26,7 +26,7 @@
                                   [org.clojure/tools.nrepl "0.2.13"]]}
              :testutils {:source-paths ^:replace  ["test"]}}
 
-  :plugins [[lein-parent "0.3.7"]
+  :plugins [[lein-parent "0.3.9"]
             [org.openvoxproject/i18n "0.9.4"]]
 
   :classifiers  [["test" :testutils]]
