@@ -1,7 +1,7 @@
 (def kitchensink-version "3.5.4")
 (def trapperkeeper-version "4.3.0")
 (def trapperkeeper-webserver-jetty10-version "1.1.0")
-(def i18n-version "1.0.2")
+(def i18n-version "1.0.3")
 (def jackson-version "2.20.1")
 
 (defproject org.openvoxproject/rbac-client "1.2.1-SNAPSHOT"
