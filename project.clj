@@ -20,7 +20,7 @@
                          [ring/ring-codec "1.1.2"]
                          [commons-io "2.20.0"]
                          [commons-codec "1.15"]
-                         [cheshire "5.10.2"]
+                         [cheshire "5.13.0"]
 
                          [com.fasterxml.jackson.core/jackson-core ~jackson-version]
                          [com.fasterxml.jackson.core/jackson-databind ~jackson-version]
