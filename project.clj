@@ -3,7 +3,7 @@
   :license {:name "Apache License, Version 2.0"
             :url "http://www.apache.org/licenses/LICENSE-2.0.html"}
 
-  :parent-project {:coords [org.openvoxproject/clj-parent "7.6.3"]
+  :parent-project {:coords [org.openvoxproject/clj-parent "7.6.6"]
                    :inherit [:managed-dependencies]}
 
   :dependencies [[org.clojure/clojure]
