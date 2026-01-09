@@ -2,7 +2,7 @@
 (def trapperkeeper-version "4.3.0")
 (def trapperkeeper-webserver-jetty10-version "1.1.0")
 (def i18n-version "1.0.2")
-(def jackson-version "2.20")
+(def jackson-version "2.20.1")
 
 (defproject org.openvoxproject/rbac-client "1.2.1-SNAPSHOT"
   :description "Tools for interacting with PE RBAC"
@@ -24,10 +24,13 @@
 
                          [com.fasterxml.jackson.core/jackson-core ~jackson-version]
                          [com.fasterxml.jackson.core/jackson-databind ~jackson-version]
-                         [com.fasterxml.jackson.core/jackson-annotations ~jackson-version]
                          [com.fasterxml.jackson.module/jackson-module-afterburner ~jackson-version]
                          [com.fasterxml.jackson.dataformat/jackson-dataformat-cbor ~jackson-version]
                          [com.fasterxml.jackson.dataformat/jackson-dataformat-smile ~jackson-version]
+                         ;; For some reason, this one doesn't follow the same versioning convention
+                         ;; for 2.20 as the others. Set this back to ~jackson-version if it does
+                         ;; for the next release.
+                         [com.fasterxml.jackson.core/jackson-annotations "2.20"]
                          
                          [org.openvoxproject/kitchensink ~kitchensink-version]
                          [org.openvoxproject/kitchensink ~kitchensink-version :classifier "test"]
