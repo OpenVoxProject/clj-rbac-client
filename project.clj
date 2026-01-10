@@ -43,7 +43,7 @@
                  [ring/ring-core]
                  [ring/ring-json "0.5.1"]
                  [slingshot "0.12.2"]
-                 [org.openvoxproject/ring-middleware "2.1.0"]
+                 [org.openvoxproject/ring-middleware "2.1.1"]
                  [org.openvoxproject/kitchensink]
                  [org.openvoxproject/http-client "2.2.2"]
                  [org.openvoxproject/trapperkeeper]
