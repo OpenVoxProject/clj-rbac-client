@@ -45,7 +45,7 @@
                  [slingshot "0.12.2"]
                  [org.openvoxproject/ring-middleware "2.1.0"]
                  [org.openvoxproject/kitchensink]
-                 [org.openvoxproject/http-client "2.2.0"]
+                 [org.openvoxproject/http-client "2.2.2"]
                  [org.openvoxproject/trapperkeeper]
                  [org.openvoxproject/i18n ~i18n-version]]
 
