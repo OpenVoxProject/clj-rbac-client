@@ -26,7 +26,7 @@
                          [com.fasterxml.jackson.core/jackson-annotations "2.20"]
                          [commons-codec "1.20.0"]
                          [commons-io "2.21.0"]
-                         [org.openvoxproject/ring-middleware "2.1.2"]
+                         [org.openvoxproject/ring-middleware "2.1.3"]
                          [org.openvoxproject/http-client "2.2.2"]
                          [org.openvoxproject/i18n ~i18n-version]
                          [org.bouncycastle/bcpkix-jdk18on "1.83"]
