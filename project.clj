@@ -36,7 +36,7 @@
                          [org.openvoxproject/trapperkeeper "4.3.2" :classifier "test"]
                          [org.openvoxproject/trapperkeeper-webserver-jetty10 "1.1.3"]
                          [org.openvoxproject/trapperkeeper-webserver-jetty10 "1.1.3" :classifier "test"]
-                         [ring/ring-core "1.15.3"]
+                         [ring/ring-core "1.14.2"]
                          [ring/ring-codec "1.3.0"]
                          [ring/ring-json "0.5.1"]
                          [slingshot "0.12.2"]]
