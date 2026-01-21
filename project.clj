@@ -23,7 +23,7 @@
                          ;; For some reason, this one doesn't follow the same versioning convention
                          ;; for 2.20 as the others. Set this back to ~jackson-version if it does
                          ;; for the next release.
-                         [com.fasterxml.jackson.core/jackson-annotations "2.20"]
+                         [com.fasterxml.jackson.core/jackson-annotations "2.21"]
                          [commons-codec "1.20.0"]
                          [commons-io "2.21.0"]
                          [org.openvoxproject/ring-middleware "2.1.4"]
