@@ -1,5 +1,5 @@
 (def i18n-version "1.0.3")
-(def jackson-version "2.21.1")
+(def jackson-version "2.21.2")
 
 (defproject org.openvoxproject/rbac-client "1.2.7-SNAPSHOT"
   :description "Tools for interacting with PE RBAC"
