@@ -27,7 +27,7 @@
                          [commons-codec "1.21.0"]
                          [commons-io "2.22.0"]
                          [org.openvoxproject/ring-middleware "2.1.6"]
-                         [org.openvoxproject/http-client "2.2.5"]
+                         [org.openvoxproject/http-client "2.2.7"]
                          [org.openvoxproject/i18n ~i18n-version]
                          [org.bouncycastle/bcpkix-jdk18on "1.84"]
                          [org.openvoxproject/kitchensink "3.5.6"]
