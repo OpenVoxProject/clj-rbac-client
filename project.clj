@@ -1,7 +1,7 @@
 (def i18n-version "1.0.4")
 (def jackson-version "2.21.3")
 
-(defproject org.openvoxproject/rbac-client "1.3.0"
+(defproject org.openvoxproject/rbac-client "1.3.1-SNAPSHOT"
   :description "Tools for interacting with PE RBAC"
   :license {:name "Apache License, Version 2.0"
             :url "http://www.apache.org/licenses/LICENSE-2.0.html"}
