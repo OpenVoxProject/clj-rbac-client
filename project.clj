@@ -1,7 +1,7 @@
 (def i18n-version "1.0.4")
 (def jackson-version "2.21.3")
 
-(defproject org.openvoxproject/rbac-client "1.2.11-SNAPSHOT"
+(defproject org.openvoxproject/rbac-client "1.3.0-SNAPSHOT"
   :description "Tools for interacting with PE RBAC"
   :license {:name "Apache License, Version 2.0"
             :url "http://www.apache.org/licenses/LICENSE-2.0.html"}
@@ -34,8 +34,8 @@
                          [org.openvoxproject/kitchensink "3.5.7" :classifier "test"]
                          [org.openvoxproject/trapperkeeper "4.3.5"]
                          [org.openvoxproject/trapperkeeper "4.3.5" :classifier "test"]
-                         [org.openvoxproject/trapperkeeper-webserver-jetty10 "1.1.8"]
-                         [org.openvoxproject/trapperkeeper-webserver-jetty10 "1.1.8" :classifier "test"]
+                         [org.openvoxproject/trapperkeeper-webserver "10.0.0"]
+                         [org.openvoxproject/trapperkeeper-webserver "10.0.0" :classifier "test"]
                          [ring/ring-core "1.14.2"]
                          [ring/ring-codec "1.3.0"]
                          [ring/ring-json "0.5.1"]
@@ -55,8 +55,8 @@
   :profiles {:dev {:dependencies [[org.bouncycastle/bcpkix-jdk18on]
                                   [org.openvoxproject/kitchensink :classifier "test"]
                                   [org.openvoxproject/trapperkeeper :classifier "test"]
-                                  [org.openvoxproject/trapperkeeper-webserver-jetty10]
-                                  [org.openvoxproject/trapperkeeper-webserver-jetty10 :classifier "test"]
+                                  [org.openvoxproject/trapperkeeper-webserver]
+                                  [org.openvoxproject/trapperkeeper-webserver :classifier "test"]
                                   ; transitive dependency
                                   [org.clojure/tools.nrepl]]}
              :testutils {:source-paths ^:replace  ["test"]}}

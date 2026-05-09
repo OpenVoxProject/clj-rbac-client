@@ -2,7 +2,7 @@
   (:require [clojure.test :refer [deftest testing is]]
             [puppetlabs.rbac-client.core :as core]
             [puppetlabs.trapperkeeper.testutils.bootstrap :refer [with-app-with-config]]
-            [puppetlabs.trapperkeeper.services.webserver.jetty10-service :refer [jetty10-service]]
+            [puppetlabs.trapperkeeper.services.webserver.jetty-service :refer [jetty-service]]
             [puppetlabs.trapperkeeper.testutils.logging :refer [with-test-logging]]
             [puppetlabs.http.client.sync :refer [create-client]]
             [puppetlabs.rbac-client.test-server :as test-server]
@@ -15,7 +15,7 @@
     (let [client (create-client {})
           handler (constantly {:status 200 :body "ok"})]
       (with-app-with-config app
-        [jetty10-service (test-server/build-test-service handler "/")]
+        [jetty-service (test-server/build-test-service handler "/")]
         {:webserver {:port test-port}}
         (is (= "ok"
                (:body (core/api-caller client (format "http://localhost:%s/" test-port) :get ""))))))
@@ -23,7 +23,7 @@
     (let [client (create-client {})
           handler (constantly {:status 500 :body "server error"})]
       (with-app-with-config app
-        [jetty10-service (test-server/build-test-service handler "/")]
+        [jetty-service (test-server/build-test-service handler "/")]
         {:webserver {:port test-port}}
         (is (= "server error" (:body (core/api-caller client (format "http://localhost:%s/" test-port) :get ""))))
         (is (thrown+? [:kind :puppetlabs.rbac-client/status-error]
@@ -39,7 +39,7 @@
           handler (test-server/make-json-handler {:status 200
                                                   :body {:foo 1 :bar {:baz 2}}})]
       (with-app-with-config app
-        [jetty10-service (test-server/build-test-service handler "/")]
+        [jetty-service (test-server/build-test-service handler "/")]
         {:webserver {:port test-port}}
         (let [response (core/json-api-caller client (format "http://localhost:%s/foo" test-port) :get "/bar?p=1")]
           (is (= 200 (:status response)))
@@ -53,7 +53,7 @@
                                                   :body {:kind :invalid
                                                          :msg "oops"}})]
       (with-app-with-config app
-        [jetty10-service (test-server/build-test-service handler "/")]
+        [jetty-service (test-server/build-test-service handler "/")]
         {:webserver {:port test-port}}
         (is (thrown+? [:kind :invalid]
                       (core/json-api-caller client (format "http://localhost:%s/" test-port) :get "" {:throw-body true})))
