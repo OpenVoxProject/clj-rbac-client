@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "addLabels": ["renovate", "dependencies"],
+  "assigneesFromCodeOwners": true,
+  "automerge": true,
+  "automergeType": "pr",
+  "dependencyDashboard": true,
+  "enabledManagers": ["leiningen"],
+  "packageRules": [
+    // Jackson 2.21.z is the LTS release line for the 2.x series.
+    // The Cheshire JSON parser uses Jackson 2.x instead of the
+    // newer 3.x release, thus we must stay on a 2.x LTS.
+    {
+      "groupName": "jackson updates",
+      "allowedVersions": "<2.22.0",
+      "matchPackageNames": [
+        "/com.fasterxml.jackson.*/"
+      ]
+    }
+  ]
+}
