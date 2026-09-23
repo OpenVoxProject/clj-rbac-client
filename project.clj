@@ -1,4 +1,4 @@
-(def i18n-version "1.0.4")
+(def i18n-version "1.0.6")
 (def jackson-version "2.21.7")
 (def jackson-annotations-version (re-find #"^\d+\.\d+" jackson-version))
 
