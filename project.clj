@@ -1,5 +1,6 @@
 (def i18n-version "1.0.4")
-(def jackson-version "2.22.1")
+(def jackson-version "2.21.7")
+(def jackson-annotations-version (re-find #"^\d+\.\d+" jackson-version))
 
 (defproject org.openvoxproject/rbac-client "1.3.1-SNAPSHOT"
   :description "Tools for interacting with PE RBAC"
@@ -20,10 +21,7 @@
                          [com.fasterxml.jackson.dataformat/jackson-dataformat-cbor ~jackson-version]
                          [com.fasterxml.jackson.dataformat/jackson-dataformat-smile ~jackson-version]
                          [com.fasterxml.jackson.module/jackson-module-afterburner ~jackson-version]
-                         ;; For some reason, this one doesn't follow the same versioning convention
-                         ;; for 2.20 as the others. Set this back to ~jackson-version if it does
-                         ;; for the next release.
-                         [com.fasterxml.jackson.core/jackson-annotations "2.22"]
+                         [com.fasterxml.jackson.core/jackson-annotations ~jackson-annotations-version]
                          [commons-codec "1.22.1"]
                          [commons-io "2.22.0"]
                          [org.openvoxproject/ring-middleware "2.2.1"]
