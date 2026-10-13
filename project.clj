@@ -22,7 +22,7 @@
                          [com.fasterxml.jackson.dataformat/jackson-dataformat-smile ~jackson-version]
                          [com.fasterxml.jackson.module/jackson-module-afterburner ~jackson-version]
                          [com.fasterxml.jackson.core/jackson-annotations ~jackson-annotations-version]
-                         [commons-codec "1.22.1"]
+                         [commons-codec "1.23.0"]
                          [commons-io "2.22.0"]
                          [org.openvoxproject/ring-middleware "2.2.1"]
                          [org.openvoxproject/http-client "2.3.0"]
