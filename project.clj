@@ -1,5 +1,5 @@
 (def i18n-version "1.0.6")
-(def jackson-version "2.21.7")
+(def jackson-version "2.21.8")
 (def jackson-annotations-version (re-find #"^\d+\.\d+" jackson-version))
 
 (defproject org.openvoxproject/rbac-client "1.3.1-SNAPSHOT"
