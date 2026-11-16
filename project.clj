@@ -15,7 +15,7 @@
   :managed-dependencies [[org.clojure/clojure "1.12.6"]
                          [org.clojure/tools.nrepl "0.2.13"]
 
-                         [cheshire "6.2.0"]
+                         [cheshire "6.2.1"]
                          [com.fasterxml.jackson.core/jackson-core ~jackson-version]
                          [com.fasterxml.jackson.core/jackson-databind ~jackson-version]
                          [com.fasterxml.jackson.dataformat/jackson-dataformat-cbor ~jackson-version]
